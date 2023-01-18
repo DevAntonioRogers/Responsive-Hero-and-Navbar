@@ -15,6 +15,10 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  cursor: pointer;
+}
+
 li{
   list-style: none;
 }
@@ -83,9 +87,10 @@ li{
   display: block;
   width: 23px;
   height: 3px;
-  background-color: rgb(0, 0, 0);
+  background-color: white;
   margin-bottom: 5px;
   transition: all 0.3s ease-in;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.6);
 }
 
 .hamburger{
@@ -103,21 +108,21 @@ li{
 
 
 
-
+  gap: 20rem;
   align-items: center;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
-.hero-container:after{
+/* .hero-container:after{
   content: ' ';
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-image: url(/wave-bottom.svg);
+  background-image: url(wave-bottom.svg);
   height: 260px;
-}
+} */
 
 .hero-left{
   text-align: center;
@@ -134,9 +139,15 @@ li{
   text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
 }
 
+
 .hero-right img{
-  width: 100%;
+  width: 800px;
   height: auto;
+  transition: 0.3s;
+}
+
+.hero-right img:hover{
+  transform: translateY(-8px)
 }
 
 .hero-left-bottom{
@@ -214,7 +225,12 @@ li{
     position: fixed;
     flex-direction: column;
     top: 4.8rem;
-    background-color: #2F80ED;
+    
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+
+
+
     width: 100%;
     transition: 0.3s ease-in;
     text-align: center;
@@ -229,7 +245,7 @@ li{
   }
 
   .link-active{
-    background-color: #2F80ED;
+    background-color: inherit;
     text-decoration: underline;
     text-shadow: 0px 2px 2px rgba(0,0,0,0.6)
   }
@@ -246,18 +262,24 @@ li{
 
   .hamburger{
     display: block;
+    
   }
+
+  
 
   .hamburger.active .bar:nth-child(2){
     opacity: 0;
+    
   }
 
   .hamburger.active .bar:nth-child(1){
     transform: translateY(8px) rotate(45deg);
+    box-shadow: none;
   }
 
   .hamburger.active .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg)
+    transform: translateY(-8px) rotate(-45deg);
+    box-shadow: none;
   }
 
   .hero-container:after{
@@ -266,13 +288,18 @@ li{
 
   .hero-container{
     flex-direction: column;
-    justify-content: center;
-    gap: 7rem;
+    gap: 10rem;
+    align-items: center;
+    
   }
 
   .hero-right img{
-    width: auto;
-    height: 500px;
+    width: 450px;
+    height: auto;
+  }
+
+  .hero-left{
+    margin-top: 6rem;
   }
 
   
@@ -297,5 +324,12 @@ li{
     justify-content: center;
     gap: 40rem;
 
+  }
+}
+
+@media only screen and (max-width: 1350px) and (min-width: 997px) {
+  .hero-right img{
+    width: 500px;
+    height: auto;
   }
 }
