@@ -48,6 +48,10 @@ li{
   justify-content: space-between;
 }
 
+.navbar-container span:nth-child(1){
+  color: #FFCB00;
+}
+
 .nav-links{
   margin-left: 5rem;
   font-size: 1.3rem;
@@ -68,10 +72,10 @@ li{
 
 .login-btn{
   margin-right: 0.8rem;
-  background-color: black;
+  background-color: #FFCB00;
   padding: 0.5rem 1.5rem;
   border-radius: 5rem;
-  color: white;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -108,11 +112,12 @@ li{
 
 
 
-  gap: 20rem;
+  gap: 5rem;
   align-items: center;
   height: 100vh;
   overflow: hidden;
   position: relative;
+  justify-content: center;
 }
 
 /* .hero-container:after{
@@ -126,6 +131,11 @@ li{
 
 .hero-left{
   text-align: center;
+  flex-grow: 3;
+}
+
+.hero-left span:nth-child(1){
+  color: #FFCB00;
 }
 .hero-left h1{
   font-size: 3.8rem;
@@ -139,9 +149,16 @@ li{
   text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
 }
 
+.hero-right{
+  margin-right: 3rem;
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .hero-right img{
-  width: 800px;
+  width: 500px;
   height: auto;
   transition: 0.3s;
 }
@@ -170,7 +187,7 @@ li{
 }
 
 .text-container span{
-  color: white;
+  color: white !important;
   font-size: 1.5rem;
   font-weight: 700;
   text-shadow: 0px 2px 2px rgba(0,0,0,0.6);
@@ -198,10 +215,10 @@ li{
 }
 
 .hero--btn{
-  background-color: black;
+  background-color: #FFCB00;
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
-  color: white;
+  color: black;
   font-size: 1.2rem;
 }
 
@@ -222,7 +239,7 @@ li{
 
 @media only screen and (max-width: 992px){
   .nav-menu{
-    position: fixed;
+    position: absolute;
     flex-direction: column;
     top: 4.8rem;
     
@@ -236,11 +253,11 @@ li{
     text-align: center;
     right: 100%;
     z-index: 99;
-    height: 90vh;
+    height: 100vh;
   }
 
   .nav-links{
-    margin: 5rem 0;
+    margin: 7rem 0;
     color: white;
   }
 
@@ -282,13 +299,11 @@ li{
     box-shadow: none;
   }
 
-  .hero-container:after{
-    background-image: none;
-  }
+
 
   .hero-container{
     flex-direction: column;
-    gap: 10rem;
+    gap: 4rem;
     align-items: center;
     
   }
@@ -302,24 +317,17 @@ li{
     margin-top: 6rem;
   }
 
+  .hero-left-bottom{
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+
   
 }
 
-@media only screen and (min-width: 1280px) {
-  .hero-container{
-    justify-content: center;
-  }
-}
+
 
 @media only screen and (min-width: 1640px) {
-  .hero-container{
-    justify-content: center;
-  }
-
-  .hero-container:after{
-    background-image: none;
-  }
-
   .navbar-container{
     justify-content: center;
     gap: 40rem;
@@ -327,9 +335,16 @@ li{
   }
 }
 
-@media only screen and (max-width: 1350px) and (min-width: 997px) {
+/* @media only screen and (max-width: 1350px) and (min-width: 997px) {
   .hero-right img{
-    width: 500px;
+    width: 550px;
     height: auto;
+    margin-right: 3rem;
+    flex-grow: 1;
   }
-}
+  .hero-left{
+    flex-grow: 2;
+  }
+
+} */
+
